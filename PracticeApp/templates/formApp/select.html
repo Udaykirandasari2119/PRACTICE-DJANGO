@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'css/employees.css' %}">
+        
+    </head>
+    <body>
+        {% for emp in employees %}
+        <div class="empinfo">
+        <a href="{% url 'employeedetailurl' emp.empno %}"><img src="{{emp.image.url}}" alt="" width="120px" height="100px"></a>
+        <p>{{emp.empname}}</p>
+        <p>{{emp.salary}}</p>
+    </div>
+        {% endfor %}
+        <div id="navigation">
+            {% if employees.has_previous %}
+            <a href="{% url 'employeeselecturl' employees.previous_page_number %}">Previous</a>
+            {% endif %}
+            <h2>{{employees.number}}</h2>
+            {% if employees.has_next %}
+            <a href="{% url 'employeeselecturl' employees.next_page_number %}">Next</a>
+            {% endif %}
+
+        </div>
+        
+    </body>
+    <p>You should to only select the one image once if you click goto the other page</p>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Book Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        form {
+            width: 50%;
+            margin: 50px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"] {
+            width: calc(100% - 22px); /* Adjust for padding and border */
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #4CAF50;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method='post'>
+        {% csrf_token %}
+        <h2>Update Book Information</h2>
+        {% for e in data %}
+        <label for="t1">ID</label>
+        <input type="text" id="t1" name="t1" value="{{e.id}}" readonly>
+        
+        <label for="t2">Book Name</label>
+        <input type="text" id="t2" name="t2" value="{{e.BookName}}">
+        
+        <label for="t3">Author Name</label>
+        <input type="text" id="t3" name="t3" value="{{e.AuthorName}}">
+        
+        <label for="t4">Price</label>
+        <input type="text" id="t4" name="t4" value="{{e.Price}}">
+        
+        <label for="t5">Feedback</label>
+        <input type="text" id="t5" name="t5" value="{{e.FeedBack}}">
+        
+        <label for="t6">Rating</label>
+        <input type="text" id="t6" name="t6" value="{{e.Rating}}">
+        {% endfor %}
+        <input type="submit" value="Update">
+    </form>
+</body>
+</html>

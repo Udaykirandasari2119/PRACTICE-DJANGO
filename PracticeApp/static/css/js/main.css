@@ -1,0 +1,17 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#heading{
+    height: 60px;
+    background-color: aqua;
+    text-align: center;
+    color: blueviolet;
+}
+#content{
+    text-align: center;
+}
+#content input{
+    height: 20px;
+    margin-top: 25px;
+}

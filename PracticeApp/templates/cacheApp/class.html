@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>It is get request to class based view</h1>
+        <form action="{% url 'functionviewurl' %}" method="post">
+            {% csrf_token %}
+            <label for="">Enter some text</label><input type="text" name="t1"><br><br>
+            <input type="submit" value="send">
+        </form>
+        <p>{{txt}}</p>
+    </body>
+</html>

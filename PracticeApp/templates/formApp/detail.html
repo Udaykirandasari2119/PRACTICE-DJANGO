@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #empimage{
+                width: 200px;
+                float: left;
+            }
+            #empdata{
+                text-align: center;
+                float: left;
+            }
+            #main{
+                position: absolute;
+                top: 50px;
+                left: 400px;
+            }
+            
+        </style>
+
+    </head>
+    <body>
+        <div id="empimg">
+           <img src="{{employee.image.url}}" alt="" width="200px" height="250px">
+        </div>
+        <div id="empdata">
+            <div id="main">
+             <p><B>Name:</B>{{employee.empname}}</p>
+             <p><B>Salary:</B>{{employee.salary}}</p>
+            </div>
+        </div>
+        <p>Django is the very easy</p>
+    </body>
+</html>

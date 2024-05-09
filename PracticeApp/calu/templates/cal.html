@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form action="" method="post" onsubmit="return validateDate()">
+            {% csrf_token %}
+            <input type="text" name="t1" id="t1" placeholder="Enter a value"><br><br>
+            <input type="text" name="t2" id="t2" placeholder="Enter another"><br><br>
+            <input type="submit" value="Add" name="add">
+            <input type="submit" value="subs" name="Subs">
+            <input type="submit" value="multi" name="multi">
+            <input type="submit" value="div" name="div">
+        </form>
+        {% if action == 'Addition' %}
+            <h1 style="color: red;"> {{action}} {{result}} </h1>
+        {% elif action == 'Multiplication' %}
+            <h2 style="color: blue;">{{action}} {{result}}</h2>
+        {% else %}
+        <h2 style="color: blueviolet;">{{action}} {{result}}</h2>
+        {% endif %}
+        <script>
+            function validateDate(){
+                let x,y;
+                x = document.getElementById('t1').value
+                y = document.getElementById('t2').value
+                if (x<0 || y<0){
+                    return false;
+                }
+                else{
+                    return true;
+                }
+            }
+        </script>
+    </body>
+</html>

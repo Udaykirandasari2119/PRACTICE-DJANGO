@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+<link rel="stylesheet" href="{% static 'css/main.css'%}">
+    </head>
+    <body>
+        <div id="heading">
+        <h1>V Cube Software</h1>
+        </div>
+        <div id="content">
+      
+            <form action="" method="post">
+                {% csrf_token %}
+            <input type="text" name="t1"> <br><br>
+            <input type="submit" value="Click me">
+            </form>
+            <p>{{greeting}} {{output}}</p>
+        </div>
+    </body>
+</html>

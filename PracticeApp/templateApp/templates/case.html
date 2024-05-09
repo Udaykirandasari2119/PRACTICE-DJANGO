@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Word Count Form</title>
+    <style>
+         .even {
+            color: blueviolet; /* Change color for even numbers */
+        }
+        .odd {
+            color: brown; /* Change color for odd numbers */
+        }
+    </style>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <textarea name="text" cols="50" rows="10"></textarea><br><br>
+        <input type="submit" value="Count Words">
+    </form>
+    
+    {% if word_count is not None %}
+    <p>Total words: {{ word_count }}</p>
+    <p class="{% if word_count|divisibleby:2 %}even{% else %}odd{% endif %}">Total words: {{ word_count }}</p>
+    {% endif %}
+    
+</body>
+</html>

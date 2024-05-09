@@ -1,0 +1,16 @@
+{% extends 'formApp/home.html' %}
+
+{% block mainpart %}
+<form action="" method="post">
+    {% csrf_token %}
+    <label for="">Username</label>
+    <input type="text" name="uname" placeholder="username"><br><br>
+    <label for="">Password</label>
+    <input type="text" name="pwd" placeholder="Password"><br><br>
+    <input type="submit" value="login">
+    <a href="{% url 'employeesignupurl' %}">SignUP</a>
+</form>
+{% for msg in messages %}
+<p>{{msg}}</p>
+{% endfor %}
+{% endblock %}

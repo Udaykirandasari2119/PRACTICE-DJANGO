@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+       <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    </head>
+    <body>
+        <div id="heading">
+            <h1>V cube Application</h1>
+        </div>
+
+        <div id="content">
+            {% block main %}
+          <h2>It is first page</h2>
+          {% endblock %}
+        </div>
+    </body>
+</html>

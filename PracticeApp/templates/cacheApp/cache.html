@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        {% for emp in employee %}
+        <div>
+            <img src="{{emp.image.url}}" alt="" height="100px" width="100px">
+        </div>
+        {% endfor %}
+    </body>
+</html>

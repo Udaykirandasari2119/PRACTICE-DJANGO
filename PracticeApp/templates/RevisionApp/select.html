@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <table border="1" cellspacing="0">
+            <tr><th>Empno</th><th>Empname</th><th>salary</th></tr>
+            {% for emp in data %}
+            <tr><td>{{emp.empno}}</td><td>{{emp.empname}}</td><td>{{emp.salary}}</td><td><a href="{% url 'updaterevurl' emp.empno%}">update</a></td><td><a href="{% url 'deleterevurl' emp.empno%}">delete</a></td></tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>

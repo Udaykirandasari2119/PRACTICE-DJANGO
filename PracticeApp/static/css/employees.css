@@ -1,0 +1,12 @@
+.empinfo{
+    width: 150px;
+    height: 200px;
+    float: left;
+}
+#navigation{
+    width: 100%;
+    display: block;
+    position: relative;
+    top: 150px;
+    left: 100px;
+}

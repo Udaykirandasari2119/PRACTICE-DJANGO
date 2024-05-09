@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form action="" method="post">
+            {% csrf_token %}
+            <label for="">Emp No:</label><input type="text" name="eno"><br><br>
+            <label for="">Emp Name</label><input type="text" name="ename"><br><br>
+            <label for="">Salary</label><input type="text" name="esal"><br><br>
+            <label for="">Deptno</label><input type="text" name="dno"><br><br>
+            <label for="">Department</label>
+            <select name="dno">
+                {% for d in depts %}
+                <option value="{{d.deptno}}">{{d.deptname}}</option>
+                {% endfor %}
+
+            </select><br><br>
+    <input type="submit" value="save">
+        </form>
+    </body>
+</html>

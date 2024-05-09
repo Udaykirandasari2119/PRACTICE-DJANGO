@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form action="" method="post">
+            {% csrf_token %}
+            <input type="text" name="t1" placeholder="Enter a fruit name"><br><br>
+            <input type="submit" value="Add">
+        </form>
+        <h1>{{name}}</h1>
+    </body>
+</html>

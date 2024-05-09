@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    #heading{
+        color: brown;
+        height: 45px;
+        background-color: aqua;
+        text-align: center;
+    }
+    #content{
+        text-align: center;
+
+    }
+    #middle{
+        text-align: center;
+        padding-top: 20px;
+    }
+    #middle input{
+        height: 25px;
+    }
+</style>
+    </head>
+    <body>
+        <div id="heading">
+        <h1>V Cube software</h1>
+        </div>
+        <div id="content">
+        <p> I am learning python Full stack</p>
+        </div>
+        <div id="middle">
+            <form action="" method="post">
+                {% csrf_token %}
+            <input type="text" name="t1"placeholder="Enter a number"><br><br>
+            <input type="text" name="t2"placeholder="Enter another number"><br><br>
+            <input type="submit" value="Calculate">
+            </form>
+        </div>
+    </body>
+</html>

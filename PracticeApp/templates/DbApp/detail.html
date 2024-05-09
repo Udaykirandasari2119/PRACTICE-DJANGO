@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form action="" method="post">
+            {% csrf_token %}
+        {% for emp in data %}
+        <input type="text" name="t1" value="{{emp.empno}}"><br><br>
+        <input type="text" name="t2" value="{{emp.empname}}"><br><br>
+        <input type="text" name="t3" value="{{emp.salary}}"><br><br>
+        <input type="submit" value="update">
+        {% endfor %}
+        </form>
+    </body>
+</html>

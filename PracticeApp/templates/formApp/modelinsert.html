@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form.as_p}} <br><br>
+            <input type="submit" value="insert">
+
+        </form>
+        {% for msg in messages %}
+           <h1>{{msg}}</h1>
+        {% endfor %}
+    <a href="{% url 'employeehomeurl' %}">Home</a>
+    </body>
+</html>

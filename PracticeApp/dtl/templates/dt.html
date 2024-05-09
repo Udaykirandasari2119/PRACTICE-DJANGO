@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>Django application</h1>
+        <form action="" method="post">
+            {% csrf_token %}
+            <input type="text" name="t1"><br><br>
+            <input type="submit" value="Click me">
+            
+        </form>
+        <p>{{greeting}} {{output}}</p>
+    </body>
+</html>

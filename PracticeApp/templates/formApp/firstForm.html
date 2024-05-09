@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{form.name.label}} {{form.name}} <br><br>
+            {{form.age.label}}  {{form.age}} <br><br>
+            {{form.doj.label}} {{form.doj}} <br><br>
+            <input type="submit" value="Click Me">        
+        </form>
+        <h2>{{name}} {{age}} {{doj}}</h2>
+        {{error}}
+      
+    </body>
+</html>

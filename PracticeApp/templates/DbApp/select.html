@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <table border="1" cellspacing="0">
+            <tr><th>Empno</th><th>Empname</th><th>Salary</th><th>Deptno</th></tr>
+        {% for emp in data %}  <!--reading from the data one by one-->
+            <tr><td>{{emp.empno}}</td><td>{{emp.empname}}</td><td>{{emp.salary}}</td><td>{{emp.department.deptname}}</td><td><a href="{% url 'updateurl' emp.empno %}">update</a></td><td><a href="{% url 'deleteurl' emp.empno %}">delete</a></td></tr>
+        {% endfor %}
+        <tr><td colspan="2">Total Salary</td><td>{{total_salary}}</td></tr>
+        <tr><td colspan="2">Avg Salary</td><td>{{avg_salary}}</td></tr>
+        <tr><td colspan="2">Min Salary</td><td>{{min_salary}}</td></tr>
+        <tr><td colspan="2">Max Salary</td><td>{{max_salary}}</td></tr>
+        </table>
+    </body>
+</html>
